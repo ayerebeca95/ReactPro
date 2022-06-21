@@ -1,25 +1,13 @@
-import './App.css';
-import NavBar from './components/NavBar';
+import "./index.css";
+import Input from "./components/Input";
+import NavBar from "./components/NavBar";
 
 function App() {
-
-  const nombre = "sebas"
-  const trabajos = {
-    manana: "profe",
-    tarde: "joyero",
-    noche: "fabrica",
-  }
   return (
-    <div className= "container">
-    {/*<div className="App" >
-      <p>{nombre} </p>
-      <p> Ayeee </p>
-      <h1>Trabajos</h1>
-      <p>{trabajos.manana}</p>
-      <p>{trabajos.tarde}</p>
-      <input placeholder= "inrese lo que quiera"/> 
-  </div>*/}
-  <NavBar/>
+    <div className="container">
+      <NavBar />
+      <Input valorPlaceholder={"Hola "} title={"como estas"} />
+      <Input valorPlaceholder={"Hola "} title={"como estas"} />
     </div>
   );
 }
