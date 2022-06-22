@@ -1,5 +1,5 @@
 import React from "react";
-//import Input from "../Input";
+import CartWidget from "../CartWidget";
 import "./styles.css";
 
 const NavBar = () => {
@@ -19,6 +19,7 @@ const NavBar = () => {
       <li>
         <a href="#about">About</a>
       </li>
+      <CartWidget/>
     </ul>
   );
 };

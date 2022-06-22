@@ -1,14 +1,14 @@
 import "./index.css";
-import Input from "./components/Input";
+//import Input from "./components/Input";
 import NavBar from "./components/NavBar";
+import ItemListContainer from "./containers/ItemListContainer";
 
 function App() {
   return (
     <div className="container">
       <NavBar />
-      <Input valorPlaceholder={"Hola "} title={"como estas"} />
-      <Input valorPlaceholder={"Hola "} title={"como estas"} />
-    </div>
+      <ItemListContainer greeting= "Hola coders" />
+</div>
   );
 }
 
