@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-
-
+import ItemCount from '../../components/ItemCount'
+import "./styles.css"
 //import jacuzzi1 from "../../assets/jacuzzi1.jpg";
 
 const ItemListContainer = ({ greeting, children }) => {
@@ -24,17 +24,21 @@ const ItemListContainer = ({ greeting, children }) => {
     }
   }, [])
 
+  const handleAdd = (counter) => {
+   console.log(`se agrego al carrito ${counter} productos`);
+  } 
+
   return (
-    <div style= {{backgroundColor : color}}>
+    <div style= {{backgroundColor : color}} className= "medioC">
       <p> {greeting} </p>
       <p> {color} </p>
       <button onClick={cambiarColor}>
         Cambiar color a red
       </button>
-
-      {/* <img src= {jacuzzi1}  alt="jacuzzi" />*/}
+     <ItemCount handleAdd= {handleAdd} initial = {1}  stock={10} />
+      {/* <img src= {jacuzzi1}  alt="jacuzzi" />
       {children}
-      <button className="btn btn-primary lg"> Presione aqui </button>
+      <button className="btn btn-primary lg"> Presione aqui </button>*/}
     </div>
   );
 };

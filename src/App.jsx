@@ -5,7 +5,7 @@ import "./App.css";
 //import AcordionControlado from "./components/AcordionControlado";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./containers/ItemListContainer";
-import ItemCount from "./ItemCount/ItemCount.js";
+
 
 function App() {
   const [containerVisible, setContainerVisible] = useState (true)
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="container">
       <NavBar />
-      <ItemCount/>
+      
       {containerVisible ? 
       <ItemListContainer greeting= "Hola coders">
         <h2> Este es el item list container</h2>
